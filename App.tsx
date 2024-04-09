@@ -4,18 +4,30 @@
  *
  * @format
  */
-
-import {DUMMY_API_KEY} from '@env';
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text, View} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {LogBox} from 'react-native';
+import {ToastProvider} from 'react-native-toast-notifications';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+
+import {MainNavigation} from './src/navigation';
+import {persistor, store} from './src/redux/store';
+
+LogBox.ignoreLogs(['Invalid prop textStyle of type array supplied to Cell']);
 
 function App(): React.JSX.Element {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignContent: 'center'}}>
-      <Icon name="rocket" size={30} color="#900" />
-      <Text>{`Hello world with react native vector icons!${DUMMY_API_KEY}.${DUMMY_API_KEY}`}</Text>
-    </View>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer>
+          <ToastProvider>
+            <MainNavigation />
+          </ToastProvider>
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
   );
 }
 

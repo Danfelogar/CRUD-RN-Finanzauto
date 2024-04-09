@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "949461991021",
+    "project_id": "disney-plus-v2",
+    "storage_bucket": "disney-plus-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949461991021:android:9bd31f04f492c3d7d70964",
+        "android_client_info": {
+          "package_name": "com.crudrnfinanzauto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949461991021-l569iulvoqg6gfvocslhf8qspuk06t2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.crudrnfinanzauto",
+            "certificate_hash": "97ac2413d01b9c91fc37ce5e1eb045c05ca4ebc2"
+          }
+        },
+        {
+          "client_id": "949461991021-r61mpv8cplti73vducl0m8b74ci19e1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDegTMH-7lGGVlPXk-AclUVYPM1b8PNm_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949461991021-r61mpv8cplti73vducl0m8b74ci19e1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

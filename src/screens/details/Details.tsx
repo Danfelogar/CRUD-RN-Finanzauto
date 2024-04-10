@@ -1,12 +1,13 @@
 import {StackScreenProps} from '@react-navigation/stack';
 import {View, Text} from 'react-native';
+import MapView, {Marker} from 'react-native-maps';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useSelector} from 'react-redux';
 
 import {HandlerImage, StandardWrapper} from '../../components';
 import {RootState} from '../../redux/store';
 import {RootStackPrivateParams} from '../../types/RootStackMainParams';
-import {TypeImage} from '../../utils';
+import {TypeImage, heightFullScreen} from '../../utils';
 import {convertPrefixesToSpanish} from '../../utils/parsingTitle';
 
 import {stylesDetails} from './styles';
@@ -32,6 +33,8 @@ export const Details = ({route, navigation}: NavigationProp) => {
     circlePhoto,
     textInformation,
   } = stylesDetails({theme});
+
+  console.log(initialValuesForUpdate?.location);
   return (
     <StandardWrapper>
       <View style={mainWrapper}>
@@ -82,6 +85,20 @@ export const Details = ({route, navigation}: NavigationProp) => {
             </Text>
           </View>
         )}
+        <MapView
+          style={{width: '100%', height: heightFullScreen * 0.65}}
+          initialRegion={{
+            latitude: 4.5709,
+            longitude: -74.2973,
+            latitudeDelta: 25,
+            longitudeDelta: 25,
+          }}>
+          <Marker
+            coordinate={{latitude: 10.9816, longitude: -74.8064}}
+            title={`ciudad:${initialValuesForUpdate?.location?.city}`}
+            description={`pais:${initialValuesForUpdate?.location?.country}`}
+          />
+        </MapView>
       </View>
     </StandardWrapper>
   );

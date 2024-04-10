@@ -11,7 +11,13 @@ export interface UserFormCreate {
   lastName: string;
   email: string;
 }
-
+export interface Location {
+  city: string;
+  country: string;
+  state: string;
+  street: string;
+  timezone: string;
+}
 export interface UserFormUpdate {
   id?: string;
   title?: string;
@@ -23,7 +29,7 @@ export interface UserFormUpdate {
   registerDate?: string;
   phone?: string;
   picture?: string;
-  location?: object | null;
+  location?: Location | null;
 }
 
 export interface UserDataState {

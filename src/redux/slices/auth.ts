@@ -23,8 +23,8 @@ const initialState: AuthState = {
   credentials: INITIAL_CREDENTIALS,
   isLogin: TypeStateAuth.Logout,
   isShowOnboarding: true,
-  msmError: '',
   token: '',
+  msmError: '',
   showMsmError: false,
 };
 
@@ -97,6 +97,7 @@ export const signIn = createAsyncThunk(
       const err = error as {message: string};
       if (err.message) {
         dispatch(setMsmError(err.message));
+        console.log('UN ERROR========>', {err});
       } else {
         dispatch(setMsmError(TypeMSMErrorGeneric.GenericError));
       }
@@ -131,6 +132,11 @@ export const signWithGoogle = createAsyncThunk(
   async (_, {dispatch}) => {
     try {
       dispatch(setLoading(true));
+      //configure Google Signin
+      GoogleSignin.configure({
+        webClientId:
+          '949461991021-l569iulvoqg6gfvocslhf8qspuk06t2k.apps.googleusercontent.com',
+      });
       // Check if your device supports Google Play
       await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
       // Get the users ID token
@@ -156,6 +162,7 @@ export const signWithGoogle = createAsyncThunk(
       const err = error as {message: string};
       if (err.message) {
         dispatch(setMsmError(err.message));
+        console.log('UN ERROR========>', {err});
       } else {
         dispatch(setMsmError(TypeMSMErrorGeneric.GenericError));
       }

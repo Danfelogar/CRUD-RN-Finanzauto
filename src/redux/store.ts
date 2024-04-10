@@ -9,6 +9,7 @@ import {
 import {useDispatch} from 'react-redux';
 import {persistStore, persistReducer} from 'redux-persist';
 
+import {setupAxiosInterceptors} from '../services/userData';
 import {TypeSlices} from '../utils';
 
 import {rootReducer} from './rootReducer';
@@ -16,7 +17,7 @@ import {rootReducer} from './rootReducer';
 const persisConfig = {
   key: TypeSlices.Root,
   storage: AsyncStorage,
-  // whitelist: [TypeSlices.Auth, TypeSlices.CockTail],
+  whitelist: [TypeSlices.Auth],
   // blacklist: [],
 };
 
@@ -51,6 +52,6 @@ export type AppStore = Omit<Store<RootState, UnknownAction>, 'dispatch'> & {
   // Updated from AnyAction
   dispatch: AppThunkDispatch;
 };
-
+setupAxiosInterceptors(store.dispatch, store.getState);
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppThunkDispatch>();

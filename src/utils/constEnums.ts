@@ -1,7 +1,7 @@
 export enum TypeSlices {
   Root = 'root',
   Auth = 'auth',
-  CockTail = 'cocktail',
+  Setting = 'settings',
 }
 
 export enum TypeActions {
@@ -10,11 +10,15 @@ export enum TypeActions {
   AuthRegister = 'auth/register',
   AuthSignInGoogle = 'auth/signInGoogle',
   AuthSignOut = 'auth/signOut',
-  //cocktail
-  CocktailByName = 'cocktail/byName',
-  CocktailByIngredient = 'cocktail/byIngredient',
-  CocktailByCategory = 'cocktail/byCategory',
-  CocktailByMostPopular = 'cocktail/byMostPopular',
+  //settings
+  SettingsChangeThemeDarkMode = 'settings/changeThemeDarkMode',
+  SettingsChangeThemeLightMode = 'settings/changeThemeLightMode',
+  //userData
+  UserDataGet = 'userData/get',
+  UserDataGetById = 'userData/getById',
+  UserDataCreate = 'userData/create',
+  UserDataUpdate = 'userData/update',
+  UserDataDelete = 'userData/delete',
 }
 
 export enum TypeEnvironment {

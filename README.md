@@ -182,3 +182,6 @@ yarn android
 ├── yarn-error.log
 └── yarn.lock
 ```
+
+# Issues
+for the google authentication problem on android read this [link where the problem is discussed](https://react-native-google-signin.github.io/docs/troubleshooting#developer_error-or-code-10-or-developer-console-is-not-set-up-correctly-error-message)

@@ -12,8 +12,10 @@ export const PrivateNavigation = () => {
         headerShown: false,
       }}>
       <Stack.Screen name="Dashboard" component={Dashboard} />
-      <Stack.Screen name="Details" component={Details} />
-      <Stack.Screen name="FormUser" component={FormUser} />
+      <Stack.Group screenOptions={{presentation: 'modal'}}>
+        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="FormUser" component={FormUser} />
+      </Stack.Group>
     </Stack.Navigator>
   );
 };

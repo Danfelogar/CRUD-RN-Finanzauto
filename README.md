@@ -1,79 +1,184 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# CRUD-React-native-CLI-Finanzauto
 
-# Getting Started
+The architecture of your project is based on a modular structure, which means it is organized around specific modules or functionalities. This structure has several advantages that make it suitable for mobile application development projects, especially in the context of React Native. These advantages include maintainability, code reusability, scalability, flexibility in development, as modules can be modified or replaced without affecting the overall functionality of the application, and it allows for parallel development of different modules by different teams or developers.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+### Setup Environment
 
-## Step 1: Start the Metro Server
+The project was created in react native with react native cli and typescript. [ See official docs](https://reactnative.dev/) to set up the environment.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Run
 
-```bash
-# using npm
-npm start
+**Environment**
 
-# OR using Yarn
-yarn start
+Remember that for the correct functioning of the project it is necessary to rename the file ".env.example" to ".env" since it contains all the necessary credentials to start the project.
+
+**Install dependencies**
+
+```
+yarn
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+**Install IOS Pods**
+cd ios to navigate to the ios folder.
 ```
+ install Bundler
+bundle exec pod install
+```
+ to install the iOS dependencies managed by CocoaPods.
+**Run IOS**
 
-### For iOS
+Remember to have an iPhone 14 Pro Max in the emulator or alternatively delete the line of code in package.json
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
+```
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+**Run Android**
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```
+yarn android
+```
 
-## Step 3: Modifying your App
+### 🛠 Tech and Libraries
 
-Now that you have successfully run the app, let's modify it.
+- [React-Native](https://reactnative.dev/): Library js
+- [TypeScript](https://www.typescriptlang.org/): Application typing stronger
+- [React Navigation](https://reactnavigation.org/): Routing and navigation
+- [Redux Toolkit](https://redux-toolkit.js.org/Í): Data storage efficient Redux
+- [React Hook Form](https://react-hook-form.com/get-started): Build scalable and performant forms
+- [yup](https://www.npmjs.com/package/yup): Object schema validation in JavaScript
+- [Firebase](https://firebase.google.com/docs/web/setup?hl=es): Servicio en la nube para gestionar login, registro y las tablas y estructura de datos
+- [React Native Firebase](https://rnfirebase.io/): bridge to use firebase with react native cli
+- [react-native-toast-notifications](https://www.npmjs.com/package/react-native-toast-notifications): Alert manager with user-friendly interface
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### App Screenshots
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+|                                 |                                     Mobile                                  |
+| :------------------------------:| :--------------------------------------------------------------------------:|
+|         Onboarding Screen       |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.16.00 PM.png)     |
+|            Login Screen         |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.16.33 PM.png)     |
+|             Home Screen         |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.17.32 PM.png)     |
+|         Details Modal Screen    |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.19.46 PM.png)     |
+|            Form Create          |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.18.20 PM.png)     |
+|             Form Update         |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.19.00 PM.png)     |
+|            Modal delete         |     ![](src/assets/screenshots/Screenshot 2024-04-10 at 6.17.53 PM.png)     |
 
-## Congratulations! :tada:
+# Link-video-demo-app
 
-You've successfully run and modified your React Native App. :partying_face:
+[![Alt text](https://img.youtube.com/vi/s4xSoJMHnKE/0.jpg)](https://www.youtube.com/watch?v=s4xSoJMHnKE)
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+# Command tree for the files
 
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+```
+├── App.tsx
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+├── app.json
+├── babel.config.js
+├── index.js
+├── jest.config.js
+├── metro.config.js
+├── package.json
+├── react-native.config.js
+├── src
+│   ├── assets
+│   │   ├── backgroundPoint.png
+│   │   ├── dietchGroupLogo.jpeg
+│   │   ├── notImg.png
+│   │   └── screenshots
+│   │       ├── Screenshot 2024-04-10 at 6.16.00 PM.png
+│   │       ├── Screenshot 2024-04-10 at 6.16.33 PM.png
+│   │       ├── Screenshot 2024-04-10 at 6.17.32 PM.png
+│   │       ├── Screenshot 2024-04-10 at 6.17.53 PM.png
+│   │       ├── Screenshot 2024-04-10 at 6.18.20 PM.png
+│   │       ├── Screenshot 2024-04-10 at 6.19.00 PM.png
+│   │       └── Screenshot 2024-04-10 at 6.19.46 PM.png
+│   ├── components
+│   │   ├── Button.tsx
+│   │   ├── HandlerImage.tsx
+│   │   ├── InputGeneric.tsx
+│   │   ├── InputSelectGeneric.tsx
+│   │   ├── ModalConfirm.tsx
+│   │   ├── StandardWrapper.tsx
+│   │   ├── index.ts
+│   │   └── styles.ts
+│   ├── navigation
+│   │   ├── MainNavigation.tsx
+│   │   ├── PrivateNavigation.tsx
+│   │   ├── PublicNavigation.tsx
+│   │   └── index.ts
+│   ├── redux
+│   │   ├── rootReducer.ts
+│   │   ├── slices
+│   │   │   ├── auth.ts
+│   │   │   ├── settings.ts
+│   │   │   └── userData.ts
+│   │   └── store.ts
+│   ├── screens
+│   │   ├── dashboard
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── components
+│   │   │   │   ├── CardUser.tsx
+│   │   │   │   ├── FlatListCardUsers.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── hooks
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── useCardUser.tsx
+│   │   │   │   └── useDashboard.tsx
+│   │   │   ├── index.ts
+│   │   │   └── styles.ts
+│   │   ├── details
+│   │   │   ├── Details.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── styles.ts
+│   │   │   └── useDetails.tsx
+│   │   ├── formUser
+│   │   │   ├── FormUser.tsx
+│   │   │   ├── components
+│   │   │   │   ├── FormUpdateOrCreate.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── index.ts
+│   │   │   ├── styles.ts
+│   │   │   └── useFormUser.tsx
+│   │   ├── index.ts
+│   │   ├── login
+│   │   │   ├── Login.tsx
+│   │   │   ├── components
+│   │   │   │   ├── LoginForm.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── index.ts
+│   │   │   ├── styles.ts
+│   │   │   └── useLogin.tsx
+│   │   └── onboarding
+│   │       ├── Onboarding.tsx
+│   │       ├── index.ts
+│   │       └── styles.ts
+│   ├── services
+│   │   └── userData.ts
+│   ├── types
+│   │   ├── RootStackMainParams.d.ts
+│   │   ├── auth.d.ts
+│   │   ├── customComponents.d.ts
+│   │   ├── env.d.ts
+│   │   ├── react-native-crypto.d.ts
+│   │   ├── response.d.ts
+│   │   ├── settings.d.ts
+│   │   └── userData.d.ts
+│   └── utils
+│       ├── constEnums.ts
+│       ├── constants.ts
+│       ├── index.ts
+│       ├── parsingTitle.ts
+│       ├── tokenGenerator.ts
+│       └── yupValidations
+│           ├── index.ts
+│           ├── validateUserDataCreate.ts
+│           ├── validateUserDataUpdate.ts
+│           └── validationLogin.ts
+├── tsconfig.json
+├── yarn-error.log
+└── yarn.lock
+```

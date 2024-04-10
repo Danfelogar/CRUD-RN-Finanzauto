@@ -56,13 +56,13 @@ yarn android
 
 |                                 |                                     Mobile                                  |
 | :------------------------------:| :--------------------------------------------------------------------------:|
-|         Onboarding Screen       |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.16.00%PM.png)     |
-|            Login Screen         |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.16.33%PM.png)     |
-|             Home Screen         |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.17.32%PM.png)     |
-|         Details Modal Screen    |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.19.46%PM.png)     |
-|            Form Create          |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.18.20%PM.png)     |
-|             Form Update         |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.19.00%PM.png)     |
-|            Modal delete         |     ![](src/assets/screenshots/Screenshot%2024-04-10%at%6.17.53%PM.png)     |
+|         Onboarding Screen       |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.16.00%20PM.png)  |
+|            Login Screen         |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.16.33%20PM.png)  |
+|             Home Screen         |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.17.32%20PM.png)  |
+|         Details Modal Screen    |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.19.46%20PM.png)  |
+|            Form Create          |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.18.20%20PM.png)  |
+|             Form Update         |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.19.00%20PM.png)  |
+|            Modal delete         |![](src/assets/screenshots/Screenshot%202024-04-10%20at%206.17.53%20PM.png)  |
 
 # Link-video-demo-app
 
